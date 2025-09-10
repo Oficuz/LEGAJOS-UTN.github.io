@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Autogestión UTN - FRM</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    @font-face {
+      font-family: 'NotoSans_online_security';
+      src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-regular.woff);
+    }
+    @font-face {
+      font-family: 'NotoSans_medium_online_security';
+      src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-medium.ttf);
+    }
+    @font-face {
+      font-family: 'NotoSans_bold_online_security';
+      src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-bold.woff);
+    }
+    @font-face {
+      font-family: 'NotoSans_semibold_online_security';
+      src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-semibold.ttf);
+    }
+
+    .modalDialog {
+      position: fixed;
+      font-family: Arial, Helvetica, sans-serif;
+      top: 0; right: 0; bottom: 0; left: 0;
+      background: rgba(0,0,0,0.1);
+      z-index: 99999;
+      opacity: 0;
+      transition: opacity 200ms ease-in;
+      pointer-events: none;
+    }
+    .modalDialog:target {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .modalDialog > div {
+      width: 300px;
+      margin: 10% auto;
+      padding: 5px 5px 5px 20px;
+      background: #fff;
+      border: solid 1px #A8A8B7;
+    }
+    .cerrar {
+      background: #606061;
+      color: #FFFFFF;
+      line-height: 25px;
+      position: absolute;
+      right: -12px;
+      top: -10px;
+      width: 24px;
+      text-align: center;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 12px;
+      box-shadow: 1px 1px 3px #000;
+    }
+    .cerrar:hover { background: #08c; }
+  </style>
+</head>
+<body>
+  <table align="center" border="0">
+    <tr>
+      <td><h1 align="center">Autogestión</h1><br></td>
+    </tr>
+    <tr>
+      <td align="center">
+        <div id="main" align="center">
+          <h2>Bienvenido</h2>
+          <h3>Franco Aarón Maldonado Ortiz</h3><br>
+
+          <div id="main2">
+            <p>Selecciona el perfil con el cual deseas trabajar:</p>
+
+            <a href="mi-autogestion.html" class="habilitado">Legajo: 53835 Alumno</a><br>
+
+            Correo electrónico:<br>
+            <a href="#" onclick="document.forms['form809184'].submit();">franco.maldonado@alumnos.frm.utn.edu.ar</a>
+            <form id="form809184" name="form809184" action="https://alumnos.frm.utn.edu.ar/webmail2/" method="post">
+              <input name="_user" id="_user" value="franco.maldonado@alumnos.frm.utn.edu.ar" type="hidden">
+              <input name="_pass" id="_pass" value="aaron321e21" type="hidden">
+              <input type="hidden" name="autodetect" value="0">
+              <input type="hidden" name="logged" value="1">
+              <input type="hidden" name="_action" value="login">
+              <input type="hidden" name="_task" value="login">
+              <input type="hidden" name="_timezone" value="_default_">
+              <input type="hidden" name="_url" value="">
+            </form><br><br>
+          </div><br><br>
+
+          <div id="main2">
+            <table>
+              <tr><td colspan="2"><h3>Campus Virtual</h3></td></tr>
+              <tr>
+                <td><img src="images/campusn.fw.png" alt="Campus Virtual"></td>
+                <td>
+                  <center>
+                    Ya estás registrado, tu usuario es:
+                    <center><font style="color:#060; font-size: 15px;">47873779</font></center>
+
+                    <!-- ✅ BOTÓN CAMBIADO A ENLACE -->
+                    <a href="https://campus.frm.utn.edu.ar/login/index.php?username=47873779&password=aaron321e21" class="habilitado" target="_blank">Acceder</a>
+                  </center>
+                </td>
+              </tr>
+            </table>
+          </div><br><br>
+
+          <div id="main2">
+            <table>
+              <tr>
+                <td><img src="images/eduroam.png" width="60" height="35" alt="eduroam"></td>
+                <td>
+                  Sé usuario de la red <strong>eduroam</strong> y disfruta de sus beneficios!
+                  <a class="a3" href="#openModalEduroam">Registrarse.</a>
+                  <div id="openModalEduroam" class="modalDialog">
+                    <div>
+                      <a href="#close" title="cerrar" class="cerrar">X</a>
+                      <form id="form3" method="post" action="process.php">
+                        <p align="center">
+                          <label>Ud. se va a Registrar como usuario de la Red eduroam. <br>Recuerde primero configurar su dispositivo.<br><br>La clave de acceso a eduroam es la misma que la de Autogestión.</label>
+                        </p>
+                        <p>
+                          <input type="hidden" name="username" value="47873779">
+                          <input type="hidden" name="password" value="aaron321e21">
+                          <input type="hidden" name="usuarioTipo" value="A">
+                          <input type="hidden" name="registrarEduroam" value="si">
+                          <input type="hidden" name="submit" value="Ingresar">
+                        </p>
+                        <p align="center"><input type="submit" class="habilitado" value="Aceptar"></p>
+                      </form>
+                    </div>
+                  </div>
+                  <a class="a3" href="https://frm.utn.edu.ar/eduroam/" target="_blank">¿Cómo configurarla?</a>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td align="right">
+        <p style="font-size: 14px">Cambiar clave, clikee <a href="cambia.php">aquí</a>.</p>
+      </td>
+    </tr>
+    <tr>
+      <td align="right" valign="top">
+        <strong><a href="logout.php">Cerrar Sesión</a></strong><p></p>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

@@ -1,0 +1,223 @@
+*¡Perfecto Franco! Acá tenés todo tu CSS original con la única modificación que pediste: el estilo para que un <a class="habilitado"> se vea igual que el botón <input type="submit">. No toqué nada más, así lo reemplazás de una sin andar buscando.
+
+✅ HTML (reemplazo del botón)
+<a href="tu-destino.html" class="habilitado">Enviar</a>
+
+
+🔁 Cambiá "tu-destino.html" por la URL que querés abrir. "Enviar" es el texto del botón.
+
+
+🎨 CSS COMPLETO (con la modificación incluida)
+* { outline: none; }
+body { font: 62.5% "Lucida Grande", Arial, sans-serif; background-color: #f6f6f6; color: #777}
+h1, h2, h3, h4, h5 { color:#222; }
+
+a { text-decoration: none; color: #08c; }
+a:hover {
+	text-decoration: none;
+	text-align: center;
+}
+
+a.a2 { font-family:Arial, Helvetica, sans-serif;
+       font-size:11px;
+	   color: #000;
+}
+a.a2:hover { font-family:Arial, Helvetica, sans-serif;
+       font-size:11px;
+	   font-style:italic;
+	   color: #0066AA;
+}
+
+a.a3 { text-decoration:none; color: #FF7F00;}
+a.a3:hover {
+	color: #B25900;
+	text-decoration: none;
+	text-align: center;
+}
+
+a.a4 { text-decoration:none; color: #060;font-size: 15px;}
+a.a4:hover {
+	color: #00B200;
+	text-decoration: none;
+	text-align: center;
+}
+a.a5 { text-decoration:none; color: #096F7E;}
+a.a5:hover {
+	color: #090;
+	text-decoration: none;
+	text-align: center;
+}
+
+h1 { font: 30px Arial, Helvetica, sans-serif; letter-spacing:-1px; padding:30px 0 0 0; margin: 0; }
+h2 { font: 18px Arial, Helvetica, sans-serif; padding: 0  0 3px 0; margin-bottom: 0; }
+h3 { font: 15px Arial, Helvetica, sans-serif; padding: 0  0 3px 0; margin-bottom: 0; color: #0088CC; font-weight: bold; }
+
+.list { margin: 0 auto; width: 380px; padding: 10px; background-color: #fff; }
+
+.exists { background: #FBE3E4 no-repeat 98% center; border-color: #FBC2C4; color:#8a1f11; }
+.avail { background: #D6FFD8 no-repeat 98% center; border-color: #A0D997; color:#436213; }
+
+#main {
+	width: 320px;
+	margin-bottom: 10px;
+	overflow: hidden;
+	font-weight: bolder;
+	margin-top: 0;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#main {
+	padding: 15px;
+	width: 350px;
+	border: 1px solid #A8A8B7;
+	-moz-border-radius: 10px;
+	-webkit-border-radius:10px;
+	background:#fff;
+}
+
+#main2 {
+	width: 320px;
+	margin-bottom: 5px;
+	overflow: hidden;
+	margin-top: 0;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#main2 {
+	padding: 5px;
+	width: 330px;
+	border: 1px solid #A8A8B7;
+	-moz-border-radius: 10px;
+	-webkit-border-radius:10px;
+	background:#fff;
+}
+
+#main3 {
+	width: 320px;
+	margin-bottom: 8px;
+	overflow: hidden;
+	font-weight: bolder;
+	margin-top: 0;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#main3 {
+	padding: 15px;
+	width: 220px;
+	border: 1px solid #A8A8B7;
+	-moz-border-radius: 10px;
+	-webkit-border-radius:10px;
+	background:#fff;
+}
+
+#title { float: left; }
+#title a { color: #333; }
+
+#login { margin: 30px 0; float: right; }
+#logout { margin: 30px 0; float: right; }
+
+.error_message { display: block; height: 22px; line-height: 22px; background: #FBE3E4 no-repeat 10px center; padding: 3px 10px 3px 35px; margin: 3px 0; color:#8a1f11;border: 1px solid #FBC2C4; -moz-border-radius: 5px; -webkit-border-radius:5px; }
+
+.success_message { display: block; height: 22px; line-height: 22px; padding: 3px 10px 3px 35px; margin: 3px 0; color:#666; border: 1px solid #A0D997; -moz-border-radius: 5px; -webkit-border-radius:5px; background-color: #D6FFD8; background-image: url(assets/success.gif); background-repeat: no-repeat; background-position: 10px center; color:#436213; }
+
+#footer { text-align: right; font-size: 10px; }
+
+label { display:block; font-weight:bold; color:#000; font:12px Calibri, Arial, Helvetica, sans-serif; text-transform:uppercase; margin:12px 0 4px; }
+
+input, textarea, select {
+	padding:7px;
+	border:1px solid #A8A8B7;
+	font:11px Arial, Helvetica, sans-serif;
+	width:100px;
+	color: #999;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	text-align:center;
+}
+
+input[type=submit], input.submit {
+	width:auto;
+	color:#fff;
+	font-weight:bold;
+	margin-top:15px;
+	cursor:pointer;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	padding:5px;
+}
+
+/* MODIFICACIÓN: estilo para <a class="habilitado"> */
+a.habilitado {
+	display: inline-block;
+	padding: 5px;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	border: 1px solid #06a;
+	background: #08c;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	cursor: pointer;
+	font: 11px Arial, Helvetica, sans-serif;
+	width: auto;
+}
+
+a.habilitado:hover,
+a.habilitado:focus {
+	background: #004D80;
+	border: 1px solid #004D80;
+	color: #fff;
+}
+
+.inhabilitado{
+	border:1px solid #C1021F;
+	background:#F00;
+}
+.inhabilitado:hover, .inhabilitado:focus{
+	border:1px solid #C1021F;
+	background:#F00;
+}
+
+ul.success-reg { margin: 5px 0; padding:0; };
+ul.success-reg li { line-height: 25px; color: #999; list-style: none; }
+span.success-info { width: 70px; }
+
+input.edit_search { width:400px; }
+select { width:auto; }
+input:focus, textarea:focus { border-color: #757584; color: #757584; background: #EAEAEA }
+
+ul.success-reg { margin:10px 10px 10px 0; font-size:120%; }
+
+ul.success-reg li { padding: 5px 0; list-style: none; color: #999; border-bottom:1px dotted #ccc; }
+
+ul.success-reg li span.success-info b { padding-right:5px; color:#222; display:inline-block; width:80px; }
+
+.credentials { width:149px; float:left; text-align: center; padding:0 5px; margin:10px 5px; border-right:1px dotted #ccc; }
+
+/* Form style */
+fieldset { padding:20px; border:1px solid #eee; -moz-border-radius: 5px; -webkit-border-radius:5px; }
+legend { padding:7px 10px; font-weight:bold; color:#000; border:1px solid #eee; -moz-border-radius: 5px; -webkit-border-radius:5px; }
+
+span.required{ font-size: 13px; color: #08c; }
+
+#succsess_page h1 { background: left no-repeat; padding-left:22px; }
+
+/* Buttons */
+hr { height:1px; background:#ccc; border:none; }
+.letraRojo {
+	color: #F00;
+}
+hr { height:1px; background:#ccc; border:none; }
+.letraAzulO {
+	color: #0088CC;
+	font-size:12px;
+}
+
+
+
+Listo para reemplazar sin tocar nada más. Si querés que el botón esté centrado o tenga margen como el original, avisame y te lo agrego también.
