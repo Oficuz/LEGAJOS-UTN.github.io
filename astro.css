@@ -130,7 +130,6 @@ body {
 }
 
 .nro {
-  background: #e5f1fc;
   color: #0073c6;
   padding: 2px 6px;
   margin-right: 10px;
@@ -170,4 +169,96 @@ body {
 }
 .contenido {
   font-size: 12px;
+}
+.cuadro-utn {
+  background-color: #0056b3;
+  color: white;
+  border-radius: 8px;
+  margin: 30px auto;
+  max-width: 950px;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding-bottom: 10px;
+}
+
+.cuadro-header {
+  display: grid;
+  grid-template-columns: 50px 300px 350px 50px;
+  align-items: center;
+  padding: 12px 20px;
+  background-color: #004a99;
+  border-bottom: 2px solid white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.cuadro-row {
+  display: grid;
+  grid-template-columns: 50px 300px 320px 50px;
+  align-items: center;
+  padding: 12px 20px;
+  background-color: white;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  gap: 10px;
+}
+
+.nro {
+  text-align: center;
+  font-weight: bold;
+}
+
+.materia {
+  display: flex;
+  align-items: center;
+}
+
+.curso {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-weight: bold;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 18px;
+  color: green;
+  font-weight: bold;
+}
+
+.folder {
+  width: 100%;
+}
+
+.folder-header {
+  background-color: #0056b3;
+  color: white;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.folder-header .arrow {
+  margin-right: 8px;
+  transition: transform 0.3s ease;
+}
+
+.folder-content {
+  padding: 8px 16px;
+  display: none;
+  background-color: white;
+  color: #333;
+  border-left: 3px solid #0056b3;
+  margin-top: 6px;
+  border-radius: 4px;
+  max-width: 400px;
+  margin-left: 0;
 }

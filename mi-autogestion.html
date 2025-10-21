@@ -74,21 +74,131 @@
       <div class="titulo">
         <span class="nro">01</span>
         <span>EXÁMENES APROBADOS</span>
+       <div class="cuadro-utn">
+  <div class="cuadro-header">
+    <span class="nro">#</span>
+    <span class="materia">MATERIA</span>
+    <span class="curso">CURSO</span>
+    <span class="check">✔</span>
+  </div>
+
+  <div class="cuadro-row">
+    <span class="nro">1</span>
+    <span class="materia">
+      <div class="folder">
+        <div class="folder-header" onclick="toggleFolder(this)">
+          <span class="arrow">▶</span> Análisis Matemático I
+        </div>
+        <div class="folder-content">
+          <p>Parcial I | 71</p>
+          <p>Parcial II | 87</p>
+        </div>
       </div>
-      <div class="contenido">
-        <p class="parcial">Parcial I Lógica y Estructura discreta | 75</p>
-        <p class="parcial">Parcial II Lógica y Estructura discreta | 70</p>
-        <p class="parcial">Parcial I Álgebra y Geometría Analítica | 71</p>
-        <p class="parcial">Parcial II Álgebra y Geometría Analítica | 84</p>
-        <p class="parcial">Parcial I Analisís Matemático 1 | 71</p>
-        <p class="parcial">Parcial II Analisís Matemático 1 | 87</p>
-        <p class="parcial">Parcial I Sistemas y Procesos de Negocios | 92</p>
-        <p class="parcial">Parcial II Sistemas y Procesos de Negocios | 82</p>
-        <p class="parcial">Parcial I Fisica | 68</p>
-        <p class="parcial">Parcial I Algoritmos y Estructura de datos | 98</p>
-        <p class="parcial">Parcial I Arquitectura de computadoras | 94</p>
-       
-        .</div>
+    </span>
+    <span class="curso">1K22</span>
+    <span class="check">✔</span>
+  </div>
+
+  <div class="cuadro-row">
+    <span class="nro">2</span>
+    <span class="materia">
+      <div class="folder">
+        <div class="folder-header" onclick="toggleFolder(this)">
+          <span class="arrow">▶</span> Lógica y Estructura Discreta
+        </div>
+        <div class="folder-content">
+          <p>Parcial I | 75</p>
+          <p>Parcial II | 70</p>
+        </div>
+      </div>
+    </span>
+    <span class="curso">1K22</span>
+    <span class="check">✔</span>
+  </div>
+
+  <div class="cuadro-row">
+    <span class="nro">3</span>
+    <span class="materia">
+      <div class="folder">
+        <div class="folder-header" onclick="toggleFolder(this)">
+          <span class="arrow">▶</span> Álgebra y Geometría Analítica
+        </div>
+        <div class="folder-content">
+          <p>Parcial I | 71</p>
+          <p>Parcial II | 84</p>
+        </div>
+      </div>
+    </span>
+    <span class="curso">1K22</span>
+    <span class="check">✔</span>
+  </div>
+
+  <div class="cuadro-row">
+    <span class="nro">4</span>
+    <span class="materia">
+      <div class="folder">
+        <div class="folder-header" onclick="toggleFolder(this)">
+          <span class="arrow">▶</span> Sistemas y Procesos de Negocios
+        </div>
+        <div class="folder-content">
+          <p>Parcial I | 92</p>
+          <p>Parcial II | 82</p>
+        </div>
+      </div>
+    </span>
+    <span class="curso">1K22</span>
+    <span class="check">✔</span>
+  </div>
+
+  <div class="cuadro-row">
+    <span class="nro">5</span>
+    <span class="materia">
+      <div class="folder">
+        <div class="folder-header" onclick="toggleFolder(this)">
+          <span class="arrow">▶</span> Física
+        </div>
+        <div class="folder-content">
+          <p>Parcial I | 68</p>
+        </div>
+      </div>
+    </span>
+    <span class="curso">1K22</span>
+    <span class="check">✔</span>
+  </div>
+
+  <div class="cuadro-row">
+    <span class="nro">6</span>
+    <span class="materia">
+      <div class="folder">
+        <div class="folder-header" onclick="toggleFolder(this)">
+          <span class="arrow">▶</span> Algoritmos y Estructura de Datos
+        </div>
+        <div class="folder-content">
+          <p>Parcial I | 98</p>
+        </div>
+      </div>
+    </span>
+    <span class="curso">1K22</span>
+    <span class="check">✔</span>
+  </div>
+
+  <div class="cuadro-row">
+    <span class="nro">7</span>
+    <span class="materia">
+      <div class="folder">
+        <div class="folder-header" onclick="toggleFolder(this)">
+          <span class="arrow">▶</span> Arquitectura de Computadoras
+        </div>
+        <div class="folder-content">
+          <p>Parcial I | 80</p>
+        </div>
+      </div>
+    </span>
+    <span class="curso">1K22</span>
+    <span class="check">✔</span>
+  </div>
+</div>
+      </div>
     </div>
 
     <div class="volver-bar">
@@ -104,5 +214,13 @@
     </div>
   </div>
 
-
+<script>
+  function toggleFolder(header) {
+    const content = header.nextElementSibling;
+    const arrow = header.querySelector('.arrow');
+    const isOpen = content.style.display === 'block';
+    content.style.display = isOpen ? 'none' : 'block';
+    arrow.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(90deg)';
+  }
+</script>
 </body></html>
